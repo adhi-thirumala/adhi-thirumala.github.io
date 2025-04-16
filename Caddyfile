@@ -1,3 +1,6 @@
-adhithirumala.com
-
-file_server
+adhithirumala.com www.adhithirumala.com {
+  root * /home/ubuntu/adhi-thirumala.github.io/
+	encode zstd gzip
+	templates
+	file_server
+}
