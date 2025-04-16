@@ -84,13 +84,20 @@
     <a href="assets/pdf/adhi_thirumala_resume.pdf">resume</a>
   </h2>
   <p>
-    <object data="https://adhithirumala.com/assets/pdf/adhi_thirumala_resume.pdf?nocache=<?php echo time(); ?>"
-      type="application/pdf" width="1200" height="2100">
-      alt : <a
-        href="https://adhithirumala.com/assets/pdf/adhi_thirumala_resume.pdf?nocache=<?php echo time(); ?>">Download
+    <object data="https://adhithirumala.com/assets/pdf/adhi_thirumala_resume.pdf" type="application/pdf" width="1200"
+      height="2100">
+      alt : <a href="https://adhithirumala.com/assets/pdf/adhi_thirumala_resume.pdf">Download
         link if it doesn't work.</a>
     </object>
   </p>
+  <script>
+    const timestamp = new Date().getTime();
+    const pdfObject = document.querySelector('object');
+    const pdfLink = document.querySelector('object a');
+    pdfObject.setAttribute('data', `assets/pdf/adhi_thirumala_resume.pdf?v=${timestamp}`);
+    pdfLink.setAttribute('href', `assets/pdf/adhi_thirumala_resume.pdf?v=${timestamp}`);
+  </script>
+
 </body>
 <footer>
   <p>
